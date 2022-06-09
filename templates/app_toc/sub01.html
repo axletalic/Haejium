@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sub.css' %}">
+<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script src="{% static 'js/jquery.jqtransform.js' %}"></script>
+<script src="{% static 'js/jquery.bxslider.js' %}"></script>
+<script src="{% static 'js/prefixfree.min.js' %}"></script>
+<script src="{% static 'js/base.js' %}"></script>
+<script src="{% static 'js/mUi.js' %}"></script>
+<script src="{% static 'js/mBase.js' %}"></script>
+<script src="{% static 'js/mCslide.js' %}"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+{% comment %} <script src="{% static 'sub01.js' %}"></script> {% endcomment %}
+<script src="{% static 'sub01_1.js' %}"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/IE7.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div id="wrap" class="wrapage">
+        <!-- Mainheader 
+        <header id="mainheader" class="fixed">
+         <div>
+             <p>태양광 발전현황</p>
+         </div>
+        </header>
+        //Mainheader -->
+        <hr>
+        <!-- contents -->        
+        <div class="contents bottomcont page02 clear_fix">
+            <div class="box01">
+                <p class="tit">태양광 발전량</p>
+                <div class="bxgra">
+                    <div>
+                        <select name="" id="">
+                            <option value="1">소속이름01</option>            
+                            <option value="2">소속이름02</option>            
+                            <option value="3">소속이름03</option>            
+                            <option value="4">소속이름04</option>
+                            <option value="5">소속이름05</option>
+                        </select>
+                        {% comment %} <ul class="clear_fix">
+                            <li class="bin01">발전량</li>
+                            <li class="bin02">발전효율</li>
+                        </ul> {% endcomment %}
+                    </div>
+                </div>
+                <div class="graph" id="power_graph">
+
+                </div>
+            </div>
+            <div class="box02">
+                <p class="tit">기상청 예보</p>
+                <div class="graph" id="weather_graph">
+
+                </div>
+            </div>
+            
+
+        </div>
+        <!-- //contents -->
+    </div>
+</body>
+
+</html>

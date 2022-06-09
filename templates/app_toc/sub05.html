@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sub.css' %}">
+<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script src="{% static 'js/jquery.jqtransform.js' %}"></script>
+<script src="{% static 'js/jquery.bxslider.js' %}"></script>
+<script src="{% static 'js/prefixfree.min.js' %}"></script>
+<script src="{% static 'js/base.js' %}"></script>
+<script src="{% static 'js/mUi.js' %}"></script>
+<script src="{% static 'js/mBase.js' %}"></script>
+<script src="{% static 'js/mCslide.js' %}"></script>
+
+<script src="{% static 'sub05_1.js' %}"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="js/IE7.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div id="wrap" class="wrapage">
+        <!-- Mainheader 
+        <header id="mainheader" class="fixed">
+         <div>
+             <p>작물통계 / 생육현황 / 환경정보</p>
+         </div>
+        </header>
+        //Mainheader -->
+        <hr>
+        <!-- contents -->        
+        <div class="contents bottomcont page06 clear_fix">
+
+            <div class="box box01">
+               <p class="tit">현재 생육 환경 편차 비율</p>
+                <div class="graph">
+
+               </div>
+            </div>
+           <div class="box box02">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">구분</th>
+                        <th scope="col">일 평균 일사량<br />(W/㎥)</th>
+                        <th scope="col">일 평균 PAR<br />(㎚)</th>
+                        <th scope="col">일 평균 풍속<br />(m/s/day)</th>
+                        <th scope="col">일 평균 온도<br />(℃)</th>
+                        <th scope="col">일 평균 습도<br />(%)</th>
+                        <th scope="col">일 평균 토양온도<br />(℃, 10cm)</th>
+                        <th scope="col">일 평균 토양수분<br />(%, 10cm)</th>
+                        <th scope="col">일 평균 토양EC<br />(ds/m, 10cm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">시험구</th>
+                        <td>5.37</td>
+                        <td>24,977.8</td>
+                        <td>0.0%</td>
+                        <td>-1.30</td>
+                        <td>63.6</td>
+                        <td>0.50</td>
+                        <td>33.2</td>
+                        <td>1.50</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">대조구</th>
+                        <td>5.60</td>
+                        <td>25,592.0</td>
+                        <td>0.0%</td>
+                        <td>-1.29</td>
+                        <td>62.7</td>
+                        <td>0.51</td>
+                        <td>32.5</td>
+                        <td>1.49</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">편차 비율</th>
+                        <td>-4.1%</td>
+                        <td>-2.4%</td>
+                        <td>0.0%</td>
+                        <td>-0.8%</td>
+                        <td>-1.4%</td>
+                        <td>-2.3%</td>
+                        <td>+2.1%</td>
+                        <td>-0.1%</td>
+                    </tr>
+                </tbody>
+            </table>
+           </div>
+           <div class="box box03">
+                <p class="tit">일사량 정보</p>
+                <div class="seletwrp">
+                    <select name="" id="">
+                        <option value="1">일 평균 일사량</option>            
+                        <option value="2">일 평균 PAR</option>
+                        <option value="3">일 평균 풍속</option>            
+                        <option value="4">일 평균 온도</option>
+                        <option value="5">일 평균 습도</option>            
+                        <option value="6">일 평균 토양온도</option>
+                        <option value="7">일 평균 토양수분</option>            
+                        <option value="8">일 평균 토양EC</option>
+                    </select>
+                </div>
+                <div class="ilsta">
+                    <ul class="clear_fix">
+                        <li class="il01">대조구</li>
+                        <li class="il02">시험구</li>
+                    </ul>
+                </div>
+                <div class="graph" id="graph">
+
+                </div>
+           </div>
+            
+        </div>
+        <!-- //contents -->
+    </div>
+</body>
+
+</html>
